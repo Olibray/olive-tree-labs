@@ -783,7 +783,7 @@
     btn.textContent = 'Sending…';
     btn.disabled = true;
     try {
-      const res = await fetch('https://formsubmit.co/ajax/too@olivetree.es', {
+      const res = await fetch('https://formsubmit.co/ajax/o@olivetree.es', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: new FormData(form)
@@ -796,12 +796,12 @@
       } else {
         btn.textContent = 'Submit application →';
         btn.disabled = false;
-        alert('Something went wrong — please try again or email us directly at too@olivetree.es');
+        alert('Something went wrong — please try again or email us directly at o@olivetree.es');
       }
     } catch {
       btn.textContent = 'Submit application →';
       btn.disabled = false;
-      alert('Something went wrong — please try again or email us directly at too@olivetree.es');
+      alert('Something went wrong — please try again or email us directly at o@olivetree.es');
     }
   });
 </script>
