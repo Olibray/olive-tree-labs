@@ -951,11 +951,7 @@
     try {
       await postToSheet(formToJSON(form, 'pledge'), btn, 'Pledge to attend →');
       localStorage.setItem(PLEDGE_KEY, '1');
-      setGate(true);
-      form.style.display = 'none';
-      const msg = document.getElementById('successMsg');
-      msg.style.display = 'block';
-      msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      window.location.href = 'thankyou.html';
     } catch {
       btn.textContent = 'Pledge to attend →';
       btn.disabled = false;
