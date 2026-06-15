@@ -359,6 +359,63 @@
     .payout-card.alt .payout-mech b { color: var(--purple); }
     @media (max-width: 760px) { .payout-grid { grid-template-columns: 1fr; } }
 
+    /* ── FOUNDERS NIGHT ── */
+    .founders-section { padding: 0 0 100px; }
+    .founders-card {
+      border-radius: 16px; overflow: hidden;
+      border: 1px solid rgba(245,158,11,0.3);
+      background: linear-gradient(135deg, rgba(245,158,11,0.07) 0%, rgba(255,30,140,0.06) 60%, rgba(11,11,13,0) 100%);
+      box-shadow: 0 0 80px rgba(245,158,11,0.08), inset 0 1px 0 rgba(245,158,11,0.15);
+      padding: 64px 60px;
+      position: relative;
+    }
+    .founders-card::before {
+      content: ''; position: absolute; top: -1px; left: 40px; right: 40px; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(245,158,11,0.6), transparent);
+    }
+    .founders-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;
+      color: #F59E0B; border: 1px solid rgba(245,158,11,0.4);
+      padding: 6px 16px; border-radius: 20px; margin-bottom: 36px;
+      background: rgba(245,158,11,0.08);
+    }
+    .founders-badge svg { flex-shrink: 0; }
+    .founders-body { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .founders-body h2 { margin-bottom: 18px; }
+    .founders-body h2 em { font-style: italic; color: #F59E0B; }
+    .founders-body > div > p { color: var(--mut); font-size: 0.92rem; margin-bottom: 32px; }
+    .founders-eyebrow {
+      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: #F59E0B; margin-bottom: 14px; display: block;
+    }
+    .founders-perks { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .founders-perks li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 0.84rem; color: var(--mut); line-height: 1.5;
+    }
+    .founders-perks li::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: #F59E0B; flex-shrink: 0; margin-top: 7px;
+    }
+    .founders-visual {
+      border-radius: 12px; overflow: hidden;
+      aspect-ratio: 4/3;
+      border: 1px solid rgba(245,158,11,0.15);
+      position: relative;
+    }
+    .founders-visual img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.85); }
+    .founders-visual::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(11,11,13,0.5) 0%, transparent 50%);
+    }
+    @media (max-width: 860px) {
+      .founders-body { grid-template-columns: 1fr; gap: 40px; }
+      .founders-card { padding: 48px 32px; }
+      .founders-visual { aspect-ratio: 16/9; }
+    }
+    @media (max-width: 540px) { .founders-card { padding: 36px 24px; } }
+
     /* ── PLEDGE ── */
     .pledge-wrap { background: var(--ink2); padding: 100px 28px; text-align: center; position: relative; overflow: hidden; }
     .pledge-wrap::before {
@@ -543,9 +600,45 @@
       <div class="step fu d4">
         <div class="step-num">05</div>
         <div>
+          <h3>The Founders Night — pledgers only</h3>
+          <p>The night before the five days begin, pledgers get their own private party. An intimate pre-festival event exclusive to the crowd that made it happen. Not available to general release.</p>
+          <span class="step-tag">Exclusive · included in your pledge</span>
+        </div>
+      </div>
+      <div class="step fu d4">
+        <div class="step-num">06</div>
+        <div>
           <h3>General release opens — at a higher price</h3>
           <p>With the lineup locked, any remaining capacity goes on general sale to the public at a higher ticket price. Pledgers are the only people who get in at £250 — so pledging now locks the lowest price this festival will ever have.</p>
           <span class="step-tag">Public price · higher than £250</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOUNDERS NIGHT ── -->
+<section class="section founders-section" id="founders">
+  <div class="container">
+    <div class="founders-card">
+      <div class="founders-badge fu">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.3 2.6 2.9.4-2.1 2 .5 2.9L6 7.5l-2.6 1.4.5-2.9-2.1-2 2.9-.4L6 1z" fill="#F59E0B"/></svg>
+        Pledgers only · exclusive
+      </div>
+      <div class="founders-body">
+        <div>
+          <span class="founders-eyebrow fu d1">The Founders Night</span>
+          <h2 class="fu d2">The party before<br><em>the journey begins.</em></h2>
+          <p class="fu d3">Before the five days open up, before the island fills — the people who made it happen get the floor first. An intimate private party the night before the festival kicks off, exclusively for pledgers. No general release. No late arrivals. Just the founders crowd.</p>
+          <ul class="founders-perks fu d4">
+            <li>Exclusive to pledgers — not available to general release</li>
+            <li>The night before the five-day journey begins</li>
+            <li>Intimate venue, founders crowd only</li>
+            <li>Included in your £250 pledge ticket — no extra charge</li>
+          </ul>
+        </div>
+        <div class="founders-visual fu d2">
+          <img src="images/bb3-crowd-hands.jpg" alt="The crowd that built Balearic Beats III">
         </div>
       </div>
     </div>
@@ -714,7 +807,7 @@
   <div class="pledge-inner container">
     <div class="eyebrow fu eyebrow--center" style="justify-content:center">Pledges Open</div>
     <h2 class="fu d1">Lock in your place<br><em>before the island fills.</em></h2>
-    <p class="pledge-sub fu d2">Pledging is free and commits you to nothing until Baliaric Beats is confirmed. Add your name, name-drop your dream acts, and help bring the inaugural <strong style="color:var(--yellow)">Bali 2027</strong> edition to life.</p>
+    <p class="pledge-sub fu d2">Pledging is free and commits you to nothing until Baliaric Beats is confirmed. Add your name, help bring <strong style="color:var(--yellow)">Bali 2027</strong> to life — and earn your place at the exclusive Founders Night before the journey begins.</p>
     <div class="price-pill fu d2"><b>£250</b><span>pledger price · general release will be higher</span></div>
 
     <form class="pledge-form fu d3" id="pledgeForm" novalidate>
